@@ -3,7 +3,7 @@ import requests
 import os
 
 app = Flask(__name__)
-
+print(HARVEST_API_TOKEN) 
 # Configuración de Harvest API
 HARVEST_ACCOUNT_ID = "1961945"  # Reemplázalo con el tuyo
 HARVEST_API_TOKEN = os.getenv("HARVEST_API_TOKEN")  # Lo leeremos desde una variable de entorno
