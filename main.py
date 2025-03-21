@@ -65,4 +65,4 @@ def send_to_bigquery(entries):
         print("Datos insertados en BigQuery exitosamente!")
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
