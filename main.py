@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 import requests
 import os
 from google.cloud import bigquery
+import datetime  # Asegúrate de importar esto
 
 app = Flask(__name__)
 
