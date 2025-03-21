@@ -14,5 +14,5 @@ RUN pip install -r requirements.txt
 # Expone el puerto
 EXPOSE 8080
 
-# Comando para ejecutar la app
-CMD ["python", "main.py"]
+# Comando para ejecutar la app usando gunicorn
+CMD ["gunicorn", "-b", "0.0.0.0:8080", "main:app"]
