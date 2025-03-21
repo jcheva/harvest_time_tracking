@@ -20,9 +20,10 @@ def fetch_harvest_data():
     response = requests.get(url, headers=headers)
     
     if response.status_code == 200:
-        return jsonify(response.json())
-    else:
-        return jsonify({"error": "No se pudo obtener los datos"}), response.status_code
+    return jsonify(response.json())
+else:
+    print(f"Error {response.status_code}: {response.text}")  # Imprimir el mensaje de error
+    return jsonify({"error": "No se pudo obtener los datos"}), response.status_code
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
